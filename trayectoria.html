@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Mario Marco | Trayectoria</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="author" content="Nuria Mármol">
+    <meta name="keywords" content="seguros, mediador, currículum, cv">
+    <meta name="description" content="Currículum interactivo de Mario Marco, mediador de seguros.">
+    <meta property="og:image" content="img/miniatura.png">
+    <meta property="og:image:alt" content="Mario Marco">
+    <meta property="og:title" content="Mario Marco | Trayectoria">
+    <!-- website, video, audio, article, book or profile -->
+    <meta property="og:type" content="website">
+    <!-- Añadir url de la web -->
+    <meta property="og:url" content="https://nuria-marmol.github.io/mariomarco">
+    <!-- Normalizador normalize.css: equilibra los estilos entre los navegadores -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- Normalizador symbiosis.css: arregla problemas en versiones de smartphone -->
+    <link rel="stylesheet" type="text/css" href="css/symbiosis.css">
+    <!-- Mis archivos CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 700px)">
+    <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 701px)">
+    <!-- Scripts -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tanrax/FFNM@1.5.0/dist/ffnm.min.js" integrity="sha384-qlI8XJcMcJMh52x4w9HA9ItB8KmW6pKaJXijVQFl6UvT1nGCH+U6Y7sbbc11HkCH" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header" x-data="{ open: false }" is-scroll-down="class:add('header--hidden')" is-scroll-up="class:remove('header--hidden')">
+        <div class="header__left">
+            <a class="header-left__link" href="index.html">
+                <img class="header-left__logo" src="img/logo.png" alt="Mario Marco">
+            </a>
+        </div>
+        <div class="header__right">
+            <!-- Botón solo en la versión móvil -->
+            <button x-on:click="open = !open" class="header-right__button header__button">
+                <!-- Cuando el desplegable se abra, mostrar la parte derecha de la imagen (el icono x) -->
+                <img x-bind:class="open ? 'header-button__icon--change' : ''" class="header-button__icon" src="img/icons/super-button.png" alt="Menú desplegable">
+            </button>
+        </div>
+        <!-- Nav oculto en la versión móvil. -->
+        <nav x-bind:class="open ? 'header__nav--show' : ''" class="header__nav">
+            <ul class="header-nav__list header__list">
+                <li class="header-list__item header__item">
+                    <!-- Usar la clase acabada en "active" para el marcador -->
+                    <a class="header-item__link" href="index.html">Inicio</a>
+                </li>
+                <li class="header-list__item header__item">
+                    <a class="header-item__link header-item__link--active" href="#">Trayectoria</a>
+                </li>
+                <li class="header-list__item header__item">
+                    <a class="header-item__link" href="sobre-mi.html">Sobre mí</a>
+                </li>
+                <li class="header-list__item header__item header-item__link--contact">
+                    <a class="header-item__link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Usar clase bold para cambiar texto a negrita -->
+    <main class="main">
+        <section class="career">
+            <div class="container">
+                <h1 class="career__title">Trayectoria</h1>
+                <div class="career__intro">
+                    <div class="career-intro__content">
+                        <h2 class="career-intro-content__title">Agente de Fiatc</h2>
+                        <p class="career-intro-content__text">He sido agente de Fiatc desde septiembre de 2017 hasta ahora. Durante estos cuatro años, sobre todo he tramitado <span class="bold">seguros</span> de automóvil, hogar y comunidad, comercio y pyme, vida y accidentes, ahorro y previsión, y decesos. También me he dedicado a la administración de agencias y a los trámites de siniestros y de seguros de asistencia en viajes.</p>
+                    </div>
+                    <div class="career-intro__image">
+                        <img class="career-intro-image__office" src="img/trayectoria.jpg" alt="Mario Marco al teléfono en oficina">
+                    </div>
+                </div>
+            </div>
+            <hr class="career__separator">
+        </section>
+        <section class="aptitudes-detail">
+            <div class="container">
+                <h2 class="aptitudes-detail__title">Mis aptitudes</h2>
+                <p class="aptitudes-detail__first-text">A lo largo de estos años, he aprendido mucho tanto profesional como personalmente, ya que en este trabajo he tenido que tratar con clientes a diario, los cuales en muchas ocasiones se encontraban en situaciones de estrés, nerviosismo o incertidumbre, como en el caso de los siniestros.</p>
+                <p class="aptitudes-detail__second-text">Gracias a esto, he mejorado las siguientes aptitudes: <span class="bold">empatía</span>, fundamental para entender las necesidades de tus clientes; <span class="bold">paciencia</span>, para mantener la calma en esos momentos en los que los clientes están inquietos; <span class="bold">sentido del deber</span>, imprescindible para estar dispuesto a prestar ayuda cuando esta se requiera; <span class="bold">habilidades sociales</span>, muy importantes para que haya una buena comunicación entre el mediador y el cliente; <span class="bold">capacidad organizativa</span>, indispensable para llevar un orden en los distintos procedimientos; y, por último, <span class="bold">resolución de problemas</span>, que es, al fin y al cabo, una de las cosas que esperan los clientes al contratar un seguro.</p>
+            </div>
+            <hr class="aptitudes-detail__separator">
+        </section>
+        <section class="courses-detail">
+            <div class="container">
+                <h2 class="courses-detail__title">Mis cursos</h2>
+                <p class="courses-detail__text">Junto con todos los cursos de <span class="bold">formación continua</span> que he podido hacer con Fiatc sobre productos, técnicas de venta y digitalización de empresas, destacan estos dos:</p>
+                <ul class="courses-detail__list detail__list">
+                    <li class="detail-list__item"><span class="bold">Verificador de siniestros y daños en automóviles</span>, del Centro Zaragoza (<time datetime="2020-09">septiembre de 2020</time>).</li>
+                    <li class="detail-list__item"><span class="bold">Formación de acceso a la mediación, grupo A</span>, del <abbr title="Investigación Cooperativa entre Entidades Aseguradoras y Fondos de Pensiones" class="detail-list-item__abbr">ICEA</abbr> (<time datetime="2021-10">octubre de 2021</time>).</li>
+                </ul>
+                <p class="courses-detail__button">
+                    <a class="courses-detail__link" href="sobre-mi.html">Conóceme mejor</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__first">
+                <a class="footer-first__link" href="contacto.html">
+                    <p class="footer-first__contact">Escríbeme</p>
+                    <img class="footer-first__image" src="img/icons/email.png" alt="Mensaje">
+                </a>
+                <p class="footer-first__author">2021 <a class="footer-first-author__link" href="https://github.com/nuria-marmol">Nuria Mármol</a>. Hecho con ❤️️.</p>
+            </div>
+            <div class="footer__second">
+                <p class="footer-second__text">Fotografías de <a class="footer-second-text__link" href="https://www.instagram.com/efaproductions/">Eduardo Pérez</a></p>
+                <p class="footer-second__text">Iconos de <a class="footer-second-text__link" href="https://www.flaticon.es">Flaticon</a></p>
+                <p class="footer-second__text"><a class="footer-second-text__link" href="aviso-legal.html">Aviso legal</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

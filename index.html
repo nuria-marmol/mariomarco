@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Mario Marco | Mediador de seguros</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="author" content="Nuria Mármol">
+    <meta name="keywords" content="seguros, mediador, agente, currículum, cv">
+    <meta name="description" content="Currículum interactivo de Mario Marco, mediador de seguros.">
+    <meta property="og:image" content="img/miniatura.png">
+    <meta property="og:image:alt" content="Mario Marco">
+    <meta property="og:title" content="Mario Marco | Mediador de seguros">
+    <!-- website, video, audio, article, book or profile -->
+    <meta property="og:type" content="website">
+    <!-- Añadir url de la web -->
+    <meta property="og:url" content="https://nuria-marmol.github.io/mariomarco">
+    <!-- Normalizador normalize.css: equilibra los estilos entre los navegadores -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- Normalizador symbiosis.css: arregla problemas en versiones de smartphone -->
+    <link rel="stylesheet" type="text/css" href="css/symbiosis.css">
+    <!-- Mis archivos CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 700px)">
+    <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 701px)">
+    <!-- Scripts -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tanrax/FFNM@1.5.0/dist/ffnm.min.js" integrity="sha384-qlI8XJcMcJMh52x4w9HA9ItB8KmW6pKaJXijVQFl6UvT1nGCH+U6Y7sbbc11HkCH" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header" x-data="{ open: false }" is-scroll-down="class:add('header--hidden')" is-scroll-up="class:remove('header--hidden')">
+        <div class="header__left">
+            <a class="header-left__link" href="#">
+                <img class="header-left__logo" src="img/logo.png" alt="Mario Marco">
+            </a>
+        </div>
+        <div class="header__right">
+            <!-- Botón solo en la versión móvil -->
+            <button x-on:click="open = !open" class="header-right__button header__button">
+                <!-- Cuando el desplegable se abra, mostrar la parte derecha de la imagen (el icono x) -->
+                <img x-bind:class="open ? 'header-button__icon--change' : ''" class="header-button__icon" src="img/icons/super-button.png" alt="Menú desplegable">
+            </button>
+        </div>
+        <!-- Nav oculto en la versión móvil. -->
+        <nav x-bind:class="open ? 'header__nav--show' : ''" class="header__nav">
+            <ul class="header-nav__list header__list">
+                <li class="header-list__item header__item">
+                    <!-- Usar la clase acabada en "active" para el marcador -->
+                    <a class="header-item__link header-item__link--active" href="#">Inicio</a>
+                </li>
+                <li class="header-list__item header__item">
+                    <a class="header-item__link" href="trayectoria.html">Trayectoria</a>
+                </li>
+                <li class="header-list__item header__item">
+                    <a class="header-item__link" href="sobre-mi.html">Sobre mí</a>
+                </li>
+                <li class="header-list__item header__item header-item__link--contact">
+                    <a class="header-item__link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <aside class="aside">
+        <section class="cookies">
+            <div class="cookies__first">
+                <div class="cookies-first__element">
+                    <img class="cookies-first__image" src="img/icons/cookies.png" alt="Cookie">
+                </div>
+                <p class="cookies-first__message">Esta web utiliza cookies para garantizarte la mejor experiencia posible. <a class="cookies-first-message__link" href="cookies.html">Leer más.</a></p>
+            </div>
+            <div class="cookies__last">
+                <button class="cookies-last__button" is-click="class:add('cookies--close', 'aside')">Aceptar</button>
+            </div>
+        </section>
+    </aside>
+    <main class="main">
+        <section class="welcome">
+            <div class="container">
+                <h1 class="welcome__title">Mediador de seguros</h1>
+                <div class="welcome__intro">
+                    <div class="welcome-intro__portrait welcome__portrait">
+                        <img class="welcome-portrait__image" src="img/inicio.jpg" alt="Retrato de Mario Marco">
+                    </div>
+                    <div class="welcome-intro__message welcome__message">
+                        <h2 class="welcome-message__title">Bienvenido a mi web</h2>
+                        <p class="welcome-message__greetings">Me alegra que estés por aquí. Ponte cómodo y sigue leyendo.</p>
+                        <p class="welcome-message__name">Mi nombre es Mario y llevo trabajando en seguros varios años. En esta página encontrarás más información sobre mi <strong>currículum</strong>.</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="welcome__separator">
+        </section>
+        <section class="insurance">
+            <div class="container">
+                <h2 class="insurance__title">Estos son los seguros que más he tramitado:</h2>
+                <ul class="insurance__list">
+                    <li class="insurance-list__item insurance__item">
+                        <div class="insurance-item__image insurance__image">
+                            <img class="insurance-image__icon" src="img/icons/car.png" alt="Coche en carretera">
+                        </div>
+                        Automóvil
+                    </li>
+                    <li class="insurance-list__item insurance__item">
+                        <div class="insurance-item__image insurance__image">
+                            <img class="insurance-image__icon" src="img/icons/house.png" alt="Casa">
+                        </div>
+                        Hogar y comunidad
+                    </li>
+                    <li class="insurance-list__item insurance__item">
+                        <div class="insurance-item__image insurance__image">
+                            <img class="insurance-image__icon" src="img/icons/store.png" alt="Tienda">
+                        </div>
+                        Comercio y pyme
+                    </li>
+                    <li class="insurance-list__item insurance__item">
+                        <div class="insurance-item__image insurance__image">
+                            <img class="insurance-image__icon" src="img/icons/life.png" alt="Paraguas">
+                        </div>
+                        Vida y accidentes
+                    </li>
+                    <li class="insurance-list__item insurance__item">
+                        <div class="insurance-item__image insurance__image">
+                            <img class="insurance-image__icon" src="img/icons/piggy-bank.png" alt="Hucha de cerdito">
+                        </div>
+                        Ahorro y previsión
+                    </li>
+                    <li class="insurance-list__item insurance__item">
+                        <div class="insurance-item__image insurance__image">
+                            <img class="insurance-image__icon" src="img/icons/tombstone.png" alt="Lápida con flores">
+                        </div>
+                        Decesos
+                    </li>
+                </ul>
+            </div>
+            <hr class="insurance__separator">
+        </section>
+        <section class="aptitudes">
+            <div class="container">
+                <h2 class="aptitudes__title">Mis aptitudes</h2>
+                <!-- div en lugar de un table porque el diseño es distinto en versión móvil y escritorio. De usar la etiqueta table, tendríamos que tener dos tablas distintas, una de ellas oculta, y hacer que se muestre esta última para la versión escritorio. Usar grid. -->
+                <div class="aptitudes__skills skills" id="skills">
+                    <p class="skills__name" id="empathy">Empatía</p>
+                    <p class="skills__name" id="patience">Paciencia</p>
+                    <p class="skills__name" id="duty">Sentido del deber</p>
+                    <p class="skills__name" id="social">Habilidades sociales</p>
+                    <p class="skills__name" id="order">Capacidad organizativa</p>
+                    <p class="skills__name" id="problems">Resolución de problemas</p>
+                </div>
+            </div>
+            <hr class="aptitudes__separator">
+        </section>
+        <section class="courses">
+            <h2 class="courses__title">Mis cursos</h2>
+            <div class="courses__image">
+                <img class="courses-image__books" src="img/inicio-libros.jpg" alt="Mesa de oficina con libros">
+            </div>
+            <div class="container">
+                <ul class="courses__list">
+                    <li class="courses-list__item">Formación de acceso a la mediación, grupo A</li>
+                    <li class="courses-list__item">Verificador de siniestros y daños en automóviles</li>
+                    <li class="courses-list__item">Formación continua en productos, técnicas de venta y digitalización de empresas</li>
+                </ul>
+            </div>
+            <div class="courses__button">
+                <a class="courses-button__link" href="trayectoria.html">Descubre más detalles</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__first">
+                <a class="footer-first__link" href="contacto.html">
+                    <p class="footer-first__contact">Escríbeme</p>
+                    <img class="footer-first__image" src="img/icons/email.png" alt="Mensaje">
+                </a>
+                <p class="footer-first__author">2021 <a class="footer-first-author__link" href="https://github.com/nuria-marmol">Nuria Mármol</a>. Hecho con ❤️️.</p>
+            </div>
+            <div class="footer__second">
+                <p class="footer-second__text">Fotografías de <a class="footer-second-text__link" href="https://www.instagram.com/efaproductions/">Eduardo Pérez</a></p>
+                <p class="footer-second__text">Iconos de <a class="footer-second-text__link" href="https://www.flaticon.es">Flaticon</a></p>
+                <p class="footer-second__text"><a class="footer-second-text__link" href="aviso-legal.html">Aviso legal</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

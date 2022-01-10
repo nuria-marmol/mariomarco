@@ -1,0 +1,428 @@
+/* Colores */
+:root {
+    --color-orange: #FDA65D;
+    --color-white: #FFF;
+    --color-black: #000;
+}
+
+/* Fuentes */
+@font-face {
+    font-family: Blinker;
+    src: url("../fonts/blinker-bold.woff2") format("woff2"),
+         url("../fonts/blinker-bold.woff") format("woff");
+    font-weight: 700;
+}
+@font-face {
+    font-family: Signika;
+    src: url("../fonts/signika-light.woff2") format("woff2"),
+         url("../fonts/signika-light.woff") format("woff");
+    font-weight: 300;
+}
+@font-face {
+    font-family: Signika;
+    src: url("../fonts/signika-bold.woff2") format("woff2"),
+         url("../fonts/signika-bold.woff") format("woff");
+    font-weight: 700;
+}
+
+/* Generales */
+.container {
+    margin: 0 auto;
+    padding: 1rem;
+}
+body {
+    background-color: var(--color-orange);
+    font-family: Signika, sans-serif;
+    font-size: 1.3rem;
+    /* Para que el header, que está fijo, no tape la landing */
+    padding-top: 7rem;
+}
+h1, h2, h3 {
+    font-family: Blinker, sans-serif;
+}
+h1 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 1.4rem;
+}
+h3 {
+    font-size: 1.3rem;
+}
+hr {
+    border: none;
+    background-color: var(--color-white);
+    height: 1.1rem;
+    width: 100%;
+}
+.bold {
+    font-weight: bold;
+}
+.white {
+    color: var(--color-white);
+}
+/* Fin generales */
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--color-white);
+    height: 7rem;
+    transition: .5s;
+}
+.header--hidden {
+    /* Usar esta clase para que desaparezca el header al hacer scroll hacia abajo */
+    transform: translateY(-10rem);
+}
+.header-nav__list {
+    list-style: none;
+    padding: 0;
+}
+.header-item__link {
+    transition: .5s;
+}
+.header-item__link:hover {
+    color: var(--color-orange);
+}
+.header-item__link--active {
+    color: var(--color-orange);
+}
+/* Fin header */
+
+/* Cookies */
+@keyframes cookies-slide {
+    from {
+        transform: translateX(-100vw);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.cookies {
+    font-size: 1.1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    transform: translateX(-100vw);
+
+    animation-name: cookies-slide;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.cookies--close {
+    /* Usar esta clase para que desaparezca el cartel de cookies */
+    display: none;
+}
+.cookies__first {
+    display: flex;
+    gap: .5rem;
+}
+.cookies-first__element {
+    width: 2rem;
+}
+.cookies-first-message__link {
+    color: var(--color-orange);
+    border-bottom: 1px solid transparent;
+    transition: 1s;
+}
+.cookies-first-message__link:hover {
+    border-bottom: 1px solid var(--color-orange);
+}
+.cookies-last__button {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: .5rem 1.5rem;
+    border-color: transparent;
+    border-radius: .5rem;
+    transition: 1s;
+}
+.cookies-last__button:hover {
+    background-color: var(--color-orange);
+}
+/* Fin cookies */
+
+/* Cookies info section */
+.cookies-info-definition__title {
+    margin-bottom: .4rem;
+}
+.cookies-info-definition__text {
+    margin-bottom: 1rem;
+}
+.cookies-info__types {
+    margin-top: 2.5rem;
+}
+.cookies-info-types__title {
+    margin-bottom: .4rem;
+}
+.cookies-info-types__text {
+    margin-bottom: 1rem;
+}
+.cookies-info__disable {
+    margin: 2.5rem 0 3.5rem;
+}
+.cookies-info-disable__title {
+    margin-bottom: .4rem;
+}
+.cookies-info-disable__text {
+    margin-bottom: 1rem;
+}
+/* Fin cookies info section */
+
+/* Welcome section */
+.welcome__title {
+    margin-bottom: .5rem;
+}
+.welcome-message__title {
+    margin-bottom: .5rem;
+}
+.welcome-message__greetings {
+    margin-bottom: 1rem;
+}
+
+/* Insurance section */
+.insurance__list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+}
+.insurance-list__item {
+    text-align: center;
+}
+
+/* Aptitudes section */
+.aptitudes__title {
+    text-align: center;
+}
+#skills {
+    display: grid;
+    margin: 0 auto;
+    text-align: center;
+    border: 3px solid var(--color-black);
+    box-sizing: content-box;
+}
+#empathy {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    border-bottom: 3px solid var(--color-black);
+    border-right: 3px solid var(--color-black);
+}
+#patience {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    border-bottom: 3px solid var(--color-black);
+}
+#duty {
+    border-bottom: 3px solid var(--color-black);
+}
+#social {
+    border-bottom: 3px solid var(--color-black);
+}
+/* Fin aptitudes section */
+
+/* Courses section */
+.courses__title {
+    text-align: center;
+}
+.courses__list {
+    margin-bottom: 3rem;
+}
+.courses__button {
+    text-align: center;
+    margin-bottom: 6.5rem;
+}
+.courses-button__link {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 1.7rem 2rem;
+    border-radius: .5rem;
+    transition: 1s;
+}
+.courses-button__link:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+/* Fin courses section */
+
+/* Career section */
+.career__title {
+    margin-bottom: 0;
+}
+
+/* Courses detail section */
+.courses-detail__list {
+    margin-bottom: 5rem;
+}
+.detail-list__item > .detail-list-item__abbr {
+    text-decoration-style: solid;
+}
+.courses-detail__button {
+    text-align: center;
+    margin-bottom: 5.5rem;
+}
+.courses-detail__link {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 1.7rem 2rem;
+    border-radius: .5rem;
+    transition: 1s;
+}
+.courses-detail__link:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+/* Fin courses detail section */
+
+/* About section */
+.about__text {
+    margin-bottom: 1rem;
+}
+.about__image {
+    margin-bottom: 1rem;
+}
+.about__text--last {
+    margin-bottom: 3.5rem;
+}
+
+/* Contact section */
+.contact__title {
+    margin-bottom: .5rem;
+}
+.contact-form__paragraph {
+    margin-top: 1.7rem;
+}
+.contact-form__custom {
+    margin-top: 2.4rem;
+}
+.contact-form__label {
+    padding-left: .2rem;
+}
+.contact-form__input {
+    display: block;
+    width: 100%;
+    height: 3.2rem;
+    border-radius: .5rem;
+    border-color: transparent;
+}
+.contact-form__message {
+    display: block;
+    width: 100%;
+    height: 9.6rem;
+    border-radius: .5rem;
+    border-color: transparent;
+}
+.contact-form__checkbox {
+    display: none;
+}
+.contact-form__my-check {
+    background-image: url("../img/icons/checkbox.png");
+    background-size: cover;
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: .2rem;
+    vertical-align: text-top;
+}
+.contact-form__checkbox:checked + .contact-form__my-check--change {
+    background-image: url("../img/icons/checkbox-checked.png");
+}
+.contact-form__paragraph--required {
+    text-align: right;
+    font-size: 1rem;
+}
+.contact-form__last-paragraph {
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+.contact-form__button {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 1rem 1.6rem;
+    border-color: transparent;
+    border-radius: .5rem;
+    transition: 1s;
+}
+.contact-form__button:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+/* Fin contact section */
+
+/* Legal section */
+.legal__title {
+    margin-bottom: .6rem;
+}
+.legal__subtitle {
+    margin-bottom: .4rem;
+}
+.legal__text {
+    margin-bottom: 1.2rem;
+}
+.personal-data__title {
+    margin-bottom: .4rem;
+}
+.general-conditions__title {
+    margin-bottom: .4rem;
+}
+.general-conditions__text {
+    margin-bottom: 1.2rem;
+}
+.general-conditions__list {
+    margin: 1rem 0 1.5rem;
+}
+.general-conditions__text--last {
+    margin-bottom: 4rem;
+}
+/* Fin legal section */
+
+/* Footer */
+.footer {
+    background-color: var(--color-white);
+    font-size: 1rem;
+}
+.footer-first__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10.4rem;
+    background-color: var(--color-orange);
+    padding: .9rem 0;
+    border-radius: .5rem;
+    transition: 1s;
+}
+.footer-first__link:hover {
+    opacity: 75%;
+}
+.footer-first__contact {
+    padding-right: .5rem;
+}
+.footer-first__image {
+    width: 2rem;
+}
+.footer-first-author__link {
+    color: var(--color-orange);
+    border-bottom: 1px solid transparent;
+    transition: 1s;
+}
+.footer-first-author__link:hover {
+    border-bottom: 1px solid var(--color-orange);
+}
+.footer-second-text__link {
+    color: var(--color-orange);
+    border-bottom: 1px solid transparent;
+    transition: 1s;
+}
+.footer-second-text__link:hover {
+    border-bottom: 1px solid var(--color-orange);
+}

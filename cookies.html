@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Mario Marco | Cookies</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="author" content="Nuria Mármol">
+    <meta name="keywords" content="seguros, mediador, currículum, cv">
+    <meta name="description" content="Currículum interactivo de Mario Marco, mediador de seguros.">
+    <meta property="og:image" content="img/miniatura.png">
+    <meta property="og:image:alt" content="Mario Marco">
+    <meta property="og:title" content="Mario Marco | Cookies">
+    <!-- website, video, audio, article, book or profile -->
+    <meta property="og:type" content="website">
+    <!-- Añadir url de la web -->
+    <meta property="og:url" content="https://nuria-marmol.github.io/mariomarco">
+    <!-- Normalizador normalize.css: equilibra los estilos entre los navegadores -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- Normalizador symbiosis.css: arregla problemas en versiones de smartphone -->
+    <link rel="stylesheet" type="text/css" href="css/symbiosis.css">
+    <!-- Mis archivos CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 700px)">
+    <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 701px)">
+    <!-- Scripts -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tanrax/FFNM@1.5.0/dist/ffnm.min.js" integrity="sha384-qlI8XJcMcJMh52x4w9HA9ItB8KmW6pKaJXijVQFl6UvT1nGCH+U6Y7sbbc11HkCH" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header" x-data="{ open: false }" is-scroll-down="class:add('header--hidden')" is-scroll-up="class:remove('header--hidden')">
+        <div class="header__left">
+            <a class="header-left__link" href="index.html">
+                <img class="header-left__logo" src="img/logo.png" alt="Mario Marco">
+            </a>
+        </div>
+        <div class="header__right">
+            <!-- Botón solo en la versión móvil -->
+            <button x-on:click="open = !open" class="header-right__button header__button">
+                <!-- Cuando el desplegable se abra, mostrar la parte derecha de la imagen (el icono x) -->
+                <img x-bind:class="open ? 'header-button__icon--change' : ''" class="header-button__icon" src="img/icons/super-button.png" alt="Menú desplegable">
+            </button>
+        </div>
+        <!-- Nav oculto en la versión móvil. -->
+        <nav x-bind:class="open ? 'header__nav--show' : ''" class="header__nav">
+            <ul class="header-nav__list header__list">
+                <li class="header-list__item header__item">
+                    <!-- Usar la clase acabada en "active" para el marcador -->
+                    <a class="header-item__link" href="index.html">Inicio</a>
+                </li>
+                <li class="header-list__item header__item">
+                    <a class="header-item__link" href="trayectoria.html">Trayectoria</a>
+                </li>
+                <li class="header-list__item header__item">
+                    <a class="header-item__link" href="sobre-mi.html">Sobre mí</a>
+                </li>
+                <li class="header-list__item header__item header-item__link--contact">
+                    <a class="header-item__link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="container">
+            <section class="cookies-info">
+                <div class="cookies-info__definition">
+                    <h1 class="cookies-info-definition__title">¿Qué son las cookies?</h1>
+                    <p class="cookies-info-definition__text">Las cookies son <span class="bold">pequeños archivos con información sobre la navegación</span> que se almacenan en el ordenador del usuario, tablet, smartphone o cualquier otro dispositivo.</p>
+                    <p class="cookies-info-definition__text">El conjunto de cookies de todos nuestros usuarios nos ayuda a mejorar la calidad de nuestra web, permitiéndonos controlar qué páginas son útiles, cuáles no y cuáles son susceptibles de mejora. Las cookies son esenciales para el funcionamiento de Internet, aportando innumerables ventajas en la prestación de servicios interactivos, facilitando la navegación y usabilidad de nuestra web.</p>
+                    <p class="cookies-info-definition__text">En ningún caso las cookies podrían dañar tu equipo. Por contra, el que estén activas nos ayuda a identificar y resolver los errores.</p>
+                </div>
+                <div class="cookies-info__types">
+                    <h2 class="cookies-info-types__title">Tipos de cookies</h2>
+                    <p class="cookies-info-types__text">Según la entidad que las gestiona, pueden ser propias o de terceros. Las <span class="bold">propias</span> son las que se envían a tu equipo desde nuestros propios equipos o dominios; con ellas prestamos el servicio que nos solicitas. En cambio, las <span class="bold">de terceros</span> se envían a tu equipo desde un equipo o dominio que no gestionamos, sino que lo hace otra entidad colaboradora. Estas son las que usan, por ejemplo, las redes sociales o contenido externo como Google Maps.</p>
+                    <p class="cookies-info-types__text">Según el plazo de tiempo que permanecen activas, pueden ser cookies de sesión o permanentes. Las <span class="bold">de sesión</span> son temporales, permanecen en el archivo de cookies de tu navegador hasta que el usuario abandona la página web, por lo que ninguna queda registrada en el disco duro de tu ordenador. La información obtenida por medio de estas cookies sirve para analizar pautas de tráfico en la web. A la larga, esto nos permite proporcionar una mejor experiencia para mejorar el contenido y facilitar su uso.</p>
+                    <p class="cookies-info-types__text">Por otro lado, las cookies <span class="bold">permanentes</span> se almacenan en el disco duro y nuestra web las lee cada vez que el usuario realiza una nueva visita. Una cookie permanente posee una fecha de expiración determinada. La cookie dejará de funcionar después de esa fecha. Estas cookies se utilizan, generalmente, para facilitar los servicios de compra y registro.</p>
+                    <p class="cookies-info-types__text">Además, según su finalidad, también podemos encontrar otros tipos de cookies: las <span class="bold">publicitarias</span>, que permiten la gestión de los espacios publicitarios que se pudieran incluir en nuestra web; las <span class="bold">de análisis</span>, que nos permiten cuantificar el número de usuarios y hacer un análisis estadístico de la utilización que hacen los usuarios de los servicios prestados; las <span class="bold">de personalización</span>, que permiten al usuario acceder al servicio con unas características predefinidas en función de una serie de criterios, como por ejemplo el idioma o el tipo de navegador a través del cual se accede al servicio; y las <span class="bold">técnicas</span>, necesarias para la navegación y el buen funcionamiento de nuestra web. Permiten, por ejemplo, controlar el tráfico y la comunicación de datos, acceder a partes de acceso restringido, realizar el proceso de compra de un pedido, utilizar elementos de seguridad o compartir contenidos a través de redes sociales.</p>
+                </div>
+                <div class="cookies-info__disable">
+                    <h2 class="cookies-info-disable__title">¿Cómo deshabilitarlas?</h2>
+                    <p class="cookies-info-disable__text">Desde tu navegador, selecciona el icono del menú (en la esquina superior derecha) y, a continuación, Ajustes o Configuración, dependiendo de si usas Firefox o Chrome. Después haz clic en Privacidad y seguridad	&gt; Cookies.</p>
+                    <p class="cookies-info-disable__text">Si utilizas Edge, encontrarás Cookies y permisos del sitio al abrir la Configuración, en el menú de la izquierda. En Safari, selecciona Preferencias y luego haz clic en Privacidad. Para otros navegadores, puedes consultar la documentación del navegador que tengas instalado.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__first">
+                <a class="footer-first__link" href="contacto.html">
+                    <p class="footer-first__contact">Escríbeme</p>
+                    <img class="footer-first__image" src="img/icons/email.png" alt="Mensaje">
+                </a>
+                <p class="footer-first__author">2021 <a class="footer-first-author__link" href="https://github.com/nuria-marmol">Nuria Mármol</a>. Hecho con ❤️️.</p>
+            </div>
+            <div class="footer__second">
+                <p class="footer-second__text">Fotografías de <a class="footer-second-text__link" href="https://www.instagram.com/efaproductions/">Eduardo Pérez</a></p>
+                <p class="footer-second__text">Iconos de <a class="footer-second-text__link" href="https://www.flaticon.es">Flaticon</a></p>
+                <p class="footer-second__text"><a class="footer-second-text__link" href="aviso-legal.html">Aviso legal</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
